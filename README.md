@@ -19,7 +19,7 @@
 + 最后，将ReportScript.py、chromedriver.exe、config.txt放在同一目录下即可
 
 
-PS：
+**PS：**
 
 PC端登录网址:https://selfreport.shu.edu.cn/
 
