@@ -31,7 +31,7 @@ js_value_yesterday = 'document.getElementById("p1_BaoSRQ-inputEl").value="' + Ye
 file_obj = open('log.txt', 'a')
 file_obj.write('\n' + NowTime.strftime('%Y/%m/%d %H:%M:%S') + '\t')
 
-driver = webdriver.Chrome()  # options=Chrome_options
+driver = webdriver.Chrome(options=Chrome_options)
 driver.get("https://selfreport.shu.edu.cn/")
 time.sleep(1)
 
