@@ -43,7 +43,7 @@ driver.find_element_by_id("password").clear()
 driver.find_element_by_id("username").send_keys(stuID)
 driver.find_element_by_id("password").send_keys(Password)
 # 点击“登录”
-driver.find_element_by_id("login-submit").click()
+driver.find_element_by_id("submit").click()
 
 time.sleep(1)
 
