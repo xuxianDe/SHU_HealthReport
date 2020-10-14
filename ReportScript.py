@@ -35,16 +35,15 @@ driver = webdriver.Chrome(options=Chrome_options)
 driver.get("https://selfreport.shu.edu.cn/")
 time.sleep(1)
 
-# 需要登录的话
-if driver.current_url == 'https://newsso.shu.edu.cn/login':
-    # 清空输入框
-    driver.find_element_by_id("username").clear()
-    driver.find_element_by_id("password").clear()
-    # 填写账号、密码
-    driver.find_element_by_id("username").send_keys(stuID)
-    driver.find_element_by_id("password").send_keys(Password)
-    # 点击“登录”
-    driver.find_element_by_id("login-submit").click()
+
+# 清空输入框
+driver.find_element_by_id("username").clear()
+driver.find_element_by_id("password").clear()
+# 填写账号、密码
+driver.find_element_by_id("username").send_keys(stuID)
+driver.find_element_by_id("password").send_keys(Password)
+# 点击“登录”
+driver.find_element_by_id("login-submit").click()
 
 time.sleep(1)
 
