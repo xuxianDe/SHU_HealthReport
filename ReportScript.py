@@ -16,7 +16,7 @@ stuID = info[0]
 Password = info[1]
 file_read.close()
 
-XueGH = "学工号：" + stuID
+XueGH = '学工号：' + stuID
 
 NowTime = datetime.datetime.now()
 TodayStr = NowTime.strftime('%Y-%m-%d')
@@ -35,6 +35,17 @@ driver = webdriver.Chrome(options=Chrome_options)
 driver.get("https://selfreport.shu.edu.cn/")
 time.sleep(1)
 
+#未读消息
+try:
+    driver.find_element_by_class_name('layui-layer-content') # 搜索“未读消息”弹窗
+except:
+    file_obj.write('没有未读消息' + '\t')
+else:
+    file_obj.write('打开未读消息' + '\t')
+    driver.find_element_by_class_name('layui-layer-btn0').click() # 未读消息“确定”按钮，自动进入消息中心
+    driver.find_element_by_class_name('f-datalist-item-inner').click() # 进入消息
+    driver.find_element_by_id('p1_ctl00_btnReturn').click()  # 点击“返回”按钮到消息中心
+    driver.find_element_by_id('Panel1_ctl00_btnReturn').click() # 点击“返回”按钮到主界面
 
 # 清空输入框
 driver.find_element_by_id("username").clear()
@@ -48,7 +59,7 @@ driver.find_element_by_id("submit").click()
 time.sleep(1)
 
 if driver.current_url == 'https://selfreport.shu.edu.cn/':
-    # 学工号：17721999，则登录成功
+    # 学工号：xxxx，则登录成功
     if driver.find_element_by_id("lbXueGH").text == XueGH:
         file_obj.write('登录成功' + '\t')
         # 点击“在校学生日报”
