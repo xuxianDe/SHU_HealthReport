@@ -30,3 +30,9 @@ chromedriver下载地址:https://npm.taobao.org/mirrors/chromedriver
 2020年10月14日更新：
 
 删除登录判断，“登录”按钮的元素id由“login_submit”改为“submit”
+
+
+
+2020年10月20日更新：
+
+增加打开未读消息的功能
