@@ -45,3 +45,8 @@ chromedriver下载地址:https://npm.taobao.org/mirrors/chromedriver
 
 2.11月下旬上海市新增两例新冠肺炎，每日一报增加更多填报信息。
 
+
+
+2020年12月15日：
+
+1.继续优化未读消息功能。

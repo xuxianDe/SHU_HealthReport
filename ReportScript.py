@@ -76,137 +76,137 @@ driver.find_element_by_id("submit").click()
 
 time.sleep(1)
 
-if driver.current_url == 'https://selfreport.shu.edu.cn/':
-    # 学工号：17721999，则登录成功
-    if driver.find_element_by_id("lbXueGH").text == XueGH:
-        file_obj.write('登录成功' + '\t')
-        # 点击“在校学生日报”
-        driver.find_element_by_id("lnkReport").click()  # https://selfreport.shu.edu.cn/XueSFX/FanXRB.aspx
-        time.sleep(1)
-        # 点击“晨报”
-        driver.find_element_by_id("p1_Button1").click()  # https://selfreport.shu.edu.cn/XueSFX/HalfdayReport.aspx?t=1
-        # 我承诺
-        driver.find_element_by_id("p1_ChengNuo-inputEl-icon").click()
-        # 身体状况：良好
-        driver.find_element_by_id("fineui_0-inputEl-icon").click()
-        # 报送日期：日期输入控件处理：js去掉只读属性，输入当天日期
-        driver.execute_script(js_date)
-        driver.execute_script(js_value_today)
-        time.sleep(0.5)
-        # 体温：36
-        driver.find_element_by_id("p1_TiWen-inputEl").clear()
-        time.sleep(0.5)
-        driver.find_element_by_id("p1_TiWen-inputEl").send_keys(36)
-        # 当天是否在校：宝山校区
-        driver.find_element_by_id("fineui_6-inputEl-icon").click()
-        # 当天所在省：输入控件处理：js去掉只读属性，输入上海
-        driver.execute_script(js_province)
-        driver.execute_script(js_province_value)
-        time.sleep(0.5)
-        # 当天所在市：输入控件处理：js去掉只读属性，输入上海市
-        driver.execute_script(js_municipal)
-        driver.execute_script(js_municipal_value)
-        time.sleep(0.5)
-        # 当天所在县区：输入控件处理：js去掉只读属性，输入宝山区
-        driver.execute_script(js_district)
-        driver.execute_script(js_district_value)
-        time.sleep(0.5)
-        # 是否在风险地区逗留：否
-        driver.find_element_by_id("fineui_11-inputEl-icon").click()
-        # 同住人员是否来自风险地区：否
-        driver.find_element_by_id("fineui_13-inputEl-icon").click()
-        # 具体地址
-        driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
-        time.sleep(0.5)
-        driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
-        # 当天是否隔离：否
-        driver.find_element_by_id("fineui_15-inputEl-icon").click()
-        # 是否接触来自风险地区人员：否
-        driver.find_element_by_id("fineui_21-inputEl-icon").click()
-        # 是否途径风险地区：否
-        driver.find_element_by_id("fineui_23-inputEl-icon").click()
-        # 健康码颜色：绿色
-        driver.find_element_by_id("fineui_26-inputEl-icon").click()
-        # 健康码14天连续绿色：是
-        driver.find_element_by_id("fineui_27-inputEl-icon").click()
-        # 点击“提交”
-        driver.find_element_by_id("p1_ctl00_btnSubmit").click()
-        time.sleep(0.5)
-        # 弹窗-确定要提交吗：点击“确定”
-        driver.find_element_by_id("fineui_32").click()
-        time.sleep(1)
+# 学工号：17721999，则登录成功
+if driver.find_element_by_id("lbXueGH").text == XueGH:
+    file_obj.write('登录成功' + '\t')
+    # 点击“在校学生日报”
+    driver.find_element_by_id("lnkReport").click()  # https://selfreport.shu.edu.cn/XueSFX/FanXRB.aspx
+    time.sleep(1)
+    # 点击“晨报”
+    driver.find_element_by_id("p1_Button1").click()  # https://selfreport.shu.edu.cn/XueSFX/HalfdayReport.aspx?t=1
+    # 我承诺
+    driver.find_element_by_id("p1_ChengNuo-inputEl-icon").click()
+    # 身体状况：良好
+    driver.find_element_by_id("fineui_0-inputEl-icon").click()
+    # 报送日期：日期输入控件处理：js去掉只读属性，输入当天日期
+    driver.execute_script(js_date)
+    driver.execute_script(js_value_today)
+    time.sleep(0.5)
+    # 体温：36
+    driver.find_element_by_id("p1_TiWen-inputEl").clear()
+    time.sleep(0.5)
+    driver.find_element_by_id("p1_TiWen-inputEl").send_keys(36)
+    # 当天是否在校：宝山校区
+    driver.find_element_by_id("fineui_6-inputEl-icon").click()
+    # 当天所在省：输入控件处理：js去掉只读属性，输入上海
+    driver.execute_script(js_province)
+    driver.execute_script(js_province_value)
+    time.sleep(0.5)
+    # 当天所在市：输入控件处理：js去掉只读属性，输入上海市
+    driver.execute_script(js_municipal)
+    driver.execute_script(js_municipal_value)
+    time.sleep(0.5)
+    # 当天所在县区：输入控件处理：js去掉只读属性，输入宝山区
+    driver.execute_script(js_district)
+    driver.execute_script(js_district_value)
+    time.sleep(0.5)
+    # 是否在风险地区逗留：否
+    driver.find_element_by_id("fineui_11-inputEl-icon").click()
+    # 同住人员是否来自风险地区：否
+    driver.find_element_by_id("fineui_13-inputEl-icon").click()
+    # 具体地址
+    driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
+    time.sleep(0.5)
+    driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
+    # 当天是否隔离：否
+    driver.find_element_by_id("fineui_15-inputEl-icon").click()
+    # 是否接触来自风险地区人员：否
+    driver.find_element_by_id("fineui_21-inputEl-icon").click()
+    # 是否途径风险地区：否
+    driver.find_element_by_id("fineui_23-inputEl-icon").click()
+    # 健康码颜色：绿色
+    driver.find_element_by_id("fineui_26-inputEl-icon").click()
+    # 健康码14天连续绿色：是
+    driver.find_element_by_id("fineui_27-inputEl-icon").click()
+    # 点击“提交”
+    driver.find_element_by_id("p1_ctl00_btnSubmit").click()
+    time.sleep(0.5)
+    # 弹窗-确定要提交吗：点击“确定”
+    driver.find_element_by_id("fineui_32").click()
+    time.sleep(1)
+    # 弹窗-提交成功：点击“确定”
+    driver.find_element_by_id("fineui_37").click()
+    file_obj.write('晨报完成' + '\t')
+    time.sleep(0.5)
+else:
+    file_obj.write('晨报失败' + '\t')
+    # -----------------------晨报完成----------------------------#
+
+
+if driver.find_element_by_id("lbXueGH").text == XueGH:
+    # 点击“在校学生日报”
+    driver.find_element_by_id("lnkReport").click()  # https://selfreport.shu.edu.cn/XueSFX/FanXRB.aspx
+    time.sleep(0.5)
+    # 点击“晚报”
+    driver.find_element_by_id("p1_Button2").click()  # https://selfreport.shu.edu.cn/XueSFX/HalfdayReport.aspx?t=2
+    # 我承诺
+    driver.find_element_by_id("p1_ChengNuo-inputEl-icon").click()
+    # 身体状况：良好
+    driver.find_element_by_id("fineui_0-inputEl-icon").click()
+    # 报送日期：日期输入控件处理：js去掉只读属性，输入当天日期
+    driver.execute_script(js_date)
+    driver.execute_script(js_value_yesterday)
+    time.sleep(0.5)
+    # 体温：36
+    driver.find_element_by_id("p1_TiWen-inputEl").clear()
+    time.sleep(0.5)
+    driver.find_element_by_id("p1_TiWen-inputEl").send_keys(36)
+    # 当天是否在校：宝山校区
+    driver.find_element_by_id("fineui_6-inputEl-icon").click()
+    # 当天所在省：输入控件处理：js去掉只读属性，输入上海
+    driver.execute_script(js_province)
+    driver.execute_script(js_province_value)
+    time.sleep(0.5)
+    # 当天所在市：输入控件处理：js去掉只读属性，输入上海市
+    driver.execute_script(js_municipal)
+    driver.execute_script(js_municipal_value)
+    time.sleep(0.5)
+    # 当天所在县区：输入控件处理：js去掉只读属性，输入宝山区
+    driver.execute_script(js_district)
+    driver.execute_script(js_district_value)
+    time.sleep(0.5)
+    # 是否在风险地区逗留：否
+    driver.find_element_by_id("fineui_11-inputEl-icon").click()
+    # 同住人员是否来自风险地区：否
+    driver.find_element_by_id("fineui_13-inputEl-icon").click()
+    # 具体地址
+    driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
+    time.sleep(0.5)
+    driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
+    # 当天是否隔离：否
+    driver.find_element_by_id("fineui_15-inputEl-icon").click()
+    # 是否接触来自风险地区人员：否
+    driver.find_element_by_id("fineui_21-inputEl-icon").click()
+    # 是否途径风险地区：否
+    driver.find_element_by_id("fineui_23-inputEl-icon").click()
+    # 健康码颜色：绿色
+    driver.find_element_by_id("fineui_26-inputEl-icon").click()
+    # 健康码14天连续绿色：是
+    driver.find_element_by_id("fineui_27-inputEl-icon").click()
+    # 点击“提交”
+    driver.find_element_by_id("p1_ctl00_btnSubmit").click()
+    # 弹窗-确定要提交吗：点击“确定”
+    driver.find_element_by_id("fineui_32").click()
+    time.sleep(1)
+    if driver.find_element_by_class_name("f-messagebox-message").text == '提交成功':
         # 弹窗-提交成功：点击“确定”
         driver.find_element_by_id("fineui_37").click()
-        file_obj.write('晨报完成' + '\t')
-        time.sleep(0.5)
-    else:
-        file_obj.write('晨报失败' + '\t')
-        # -----------------------晨报完成----------------------------#
-
-    if driver.find_element_by_id("lbXueGH").text == XueGH:
-        # 点击“在校学生日报”
-        driver.find_element_by_id("lnkReport").click()  # https://selfreport.shu.edu.cn/XueSFX/FanXRB.aspx
-        time.sleep(0.5)
-        # 点击“晚报”
-        driver.find_element_by_id("p1_Button2").click()  # https://selfreport.shu.edu.cn/XueSFX/HalfdayReport.aspx?t=2
-        # 我承诺
-        driver.find_element_by_id("p1_ChengNuo-inputEl-icon").click()
-        # 身体状况：良好
-        driver.find_element_by_id("fineui_0-inputEl-icon").click()
-        # 报送日期：日期输入控件处理：js去掉只读属性，输入当天日期
-        driver.execute_script(js_date)
-        driver.execute_script(js_value_yesterday)
-        time.sleep(0.5)
-        # 体温：36
-        driver.find_element_by_id("p1_TiWen-inputEl").clear()
-        time.sleep(0.5)
-        driver.find_element_by_id("p1_TiWen-inputEl").send_keys(36)
-        # 当天是否在校：宝山校区
-        driver.find_element_by_id("fineui_6-inputEl-icon").click()
-        # 当天所在省：输入控件处理：js去掉只读属性，输入上海
-        driver.execute_script(js_province)
-        driver.execute_script(js_province_value)
-        time.sleep(0.5)
-        # 当天所在市：输入控件处理：js去掉只读属性，输入上海市
-        driver.execute_script(js_municipal)
-        driver.execute_script(js_municipal_value)
-        time.sleep(0.5)
-        # 当天所在县区：输入控件处理：js去掉只读属性，输入宝山区
-        driver.execute_script(js_district)
-        driver.execute_script(js_district_value)
-        time.sleep(0.5)
-        # 是否在风险地区逗留：否
-        driver.find_element_by_id("fineui_11-inputEl-icon").click()
-        # 同住人员是否来自风险地区：否
-        driver.find_element_by_id("fineui_13-inputEl-icon").click()
-        # 具体地址
-        driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
-        time.sleep(0.5)
-        driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
-        # 当天是否隔离：否
-        driver.find_element_by_id("fineui_15-inputEl-icon").click()
-        # 是否接触来自风险地区人员：否
-        driver.find_element_by_id("fineui_21-inputEl-icon").click()
-        # 是否途径风险地区：否
-        driver.find_element_by_id("fineui_23-inputEl-icon").click()
-        # 健康码颜色：绿色
-        driver.find_element_by_id("fineui_26-inputEl-icon").click()
-        # 健康码14天连续绿色：是
-        driver.find_element_by_id("fineui_27-inputEl-icon").click()
-        # 点击“提交”
-        driver.find_element_by_id("p1_ctl00_btnSubmit").click()
-        # 弹窗-确定要提交吗：点击“确定”
-        driver.find_element_by_id("fineui_32").click()
-        time.sleep(1)
-        if driver.find_element_by_class_name("f-messagebox-message").text == '提交成功':
-            # 弹窗-提交成功：点击“确定”
-            driver.find_element_by_id("fineui_37").click()
-            file_obj.write('晚报完成' + '\t')
-        else:
-            file_obj.write('晚报失败' + '\t')
-        time.sleep(0.5)
+        file_obj.write('晚报完成' + '\t')
     else:
         file_obj.write('晚报失败' + '\t')
+    time.sleep(0.5)
+else:
+    file_obj.write('晚报失败' + '\t')
         # -----------------------晚报完成----------------------------#
 
 if driver.current_url == 'https://selfreport.shu.edu.cn/Default.aspx':
