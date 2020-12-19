@@ -50,3 +50,9 @@ chromedriver下载地址:https://npm.taobao.org/mirrors/chromedriver
 2020年12月15日：
 
 1.继续优化未读消息功能。
+
+
+
+2020年12月20日：
+
+1.每日健康报送项目减小，脚本随之调整

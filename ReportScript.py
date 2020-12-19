@@ -86,12 +86,12 @@ if driver.find_element_by_id("lbXueGH").text == XueGH:
     driver.find_element_by_id("p1_Button1").click()  # https://selfreport.shu.edu.cn/XueSFX/HalfdayReport.aspx?t=1
     # 我承诺
     driver.find_element_by_id("p1_ChengNuo-inputEl-icon").click()
-    # 身体状况：良好
-    driver.find_element_by_id("fineui_0-inputEl-icon").click()
     # 报送日期：日期输入控件处理：js去掉只读属性，输入当天日期
     driver.execute_script(js_date)
     driver.execute_script(js_value_today)
     time.sleep(0.5)
+    # 身体状况：良好
+    driver.find_element_by_id("fineui_0-inputEl-icon").click()
     # 体温：36
     driver.find_element_by_id("p1_TiWen-inputEl").clear()
     time.sleep(0.5)
@@ -110,20 +110,20 @@ if driver.find_element_by_id("lbXueGH").text == XueGH:
     driver.execute_script(js_district)
     driver.execute_script(js_district_value)
     time.sleep(0.5)
-    # 是否在风险地区逗留：否
-    driver.find_element_by_id("fineui_11-inputEl-icon").click()
-    # 同住人员是否来自风险地区：否
-    driver.find_element_by_id("fineui_13-inputEl-icon").click()
     # 具体地址
     driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
     time.sleep(0.5)
     driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
+    # 是否在中高风险地区逗留：否
+    driver.find_element_by_id("fineui_11-inputEl-icon").click()
+    # 同住人员是否来自中高风险地区：否
+    driver.find_element_by_id("fineui_13-inputEl-icon").click()
+    # 是否接触来自中高风险地区人员：否
+    driver.find_element_by_id("fineui_17-inputEl-icon").click()
+    # 是否途径中高风险地区：否
+    driver.find_element_by_id("fineui_19-inputEl-icon").click()
     # 当天是否隔离：否
-    driver.find_element_by_id("fineui_15-inputEl-icon").click()
-    # 是否接触来自风险地区人员：否
     driver.find_element_by_id("fineui_21-inputEl-icon").click()
-    # 是否途径风险地区：否
-    driver.find_element_by_id("fineui_23-inputEl-icon").click()
     # 健康码颜色：绿色
     driver.find_element_by_id("fineui_26-inputEl-icon").click()
     # 健康码14天连续绿色：是
@@ -151,12 +151,12 @@ if driver.find_element_by_id("lbXueGH").text == XueGH:
     driver.find_element_by_id("p1_Button2").click()  # https://selfreport.shu.edu.cn/XueSFX/HalfdayReport.aspx?t=2
     # 我承诺
     driver.find_element_by_id("p1_ChengNuo-inputEl-icon").click()
-    # 身体状况：良好
-    driver.find_element_by_id("fineui_0-inputEl-icon").click()
     # 报送日期：日期输入控件处理：js去掉只读属性，输入当天日期
     driver.execute_script(js_date)
     driver.execute_script(js_value_yesterday)
     time.sleep(0.5)
+    # 身体状况：良好
+    driver.find_element_by_id("fineui_0-inputEl-icon").click()
     # 体温：36
     driver.find_element_by_id("p1_TiWen-inputEl").clear()
     time.sleep(0.5)
@@ -175,20 +175,20 @@ if driver.find_element_by_id("lbXueGH").text == XueGH:
     driver.execute_script(js_district)
     driver.execute_script(js_district_value)
     time.sleep(0.5)
-    # 是否在风险地区逗留：否
-    driver.find_element_by_id("fineui_11-inputEl-icon").click()
-    # 同住人员是否来自风险地区：否
-    driver.find_element_by_id("fineui_13-inputEl-icon").click()
     # 具体地址
     driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
     time.sleep(0.5)
     driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
+    # 是否在中高风险地区逗留：否
+    driver.find_element_by_id("fineui_11-inputEl-icon").click()
+    # 同住人员是否来自中高风险地区：否
+    driver.find_element_by_id("fineui_13-inputEl-icon").click()
+    # 是否接触来自中高风险地区人员：否
+    driver.find_element_by_id("fineui_17-inputEl-icon").click()
+    # 是否途径中高风险地区：否
+    driver.find_element_by_id("fineui_19-inputEl-icon").click()
     # 当天是否隔离：否
-    driver.find_element_by_id("fineui_15-inputEl-icon").click()
-    # 是否接触来自风险地区人员：否
     driver.find_element_by_id("fineui_21-inputEl-icon").click()
-    # 是否途径风险地区：否
-    driver.find_element_by_id("fineui_23-inputEl-icon").click()
     # 健康码颜色：绿色
     driver.find_element_by_id("fineui_26-inputEl-icon").click()
     # 健康码14天连续绿色：是
