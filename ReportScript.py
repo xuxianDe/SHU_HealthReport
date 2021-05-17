@@ -76,7 +76,7 @@ driver.find_element_by_id("submit").click()
 
 time.sleep(1)
 
-# 学工号：17721999，则登录成功
+# 学工号：XXXXXXXX，则登录成功
 if driver.find_element_by_id("lbXueGH").text == XueGH:
     file_obj.write('登录成功' + '\t')
     # 点击“在校学生日报”
@@ -113,7 +113,7 @@ if driver.find_element_by_id("lbXueGH").text == XueGH:
     # 具体地址
     driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
     time.sleep(0.5)
-    driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
+    driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('XXXXXX')
     # 是否在中高风险地区逗留：否
     driver.find_element_by_id("fineui_11-inputEl-icon").click()
     # 同住人员是否来自中高风险地区：否
@@ -178,7 +178,7 @@ if driver.find_element_by_id("lbXueGH").text == XueGH:
     # 具体地址
     driver.find_element_by_id("p1_XiangXDZ-inputEl").clear()
     time.sleep(0.5)
-    driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('校内4号楼607')
+    driver.find_element_by_id("p1_XiangXDZ-inputEl").send_keys('XXXXX')
     # 是否在中高风险地区逗留：否
     driver.find_element_by_id("fineui_11-inputEl-icon").click()
     # 同住人员是否来自中高风险地区：否
