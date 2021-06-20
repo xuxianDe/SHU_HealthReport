@@ -59,3 +59,4 @@ chromedriver下载地址:https://npm.taobao.org/mirrors/chromedriver
 
 2020年6月20日：
 1.test1 on folder local
+2.test change on another folder
