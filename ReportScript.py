@@ -210,9 +210,9 @@ else:
         # -----------------------晚报完成----------------------------#
 
 if driver.current_url == 'https://selfreport.shu.edu.cn/Default.aspx':
-    file_obj.write('两报完成，')
+    file_obj.write('两报完成, ')
 else:
-    file_obj.write('两报失败，')
+    file_obj.write('两报失败, ')
 
 NowTime = datetime.datetime.now()
 file_obj.write(NowTime.strftime('%Y/%m/%d %H:%M:%S'))
