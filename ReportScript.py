@@ -216,6 +216,6 @@ else:
 
 NowTime = datetime.datetime.now()
 file_obj.write(NowTime.strftime('%Y/%m/%d %H:%M:%S'))
-
+#woshi shabi!
 file_obj.close()
 driver.quit()
