@@ -58,7 +58,17 @@ chromedriver下载地址:https://npm.taobao.org/mirrors/chromedriver
 1.每日健康报送项目减小，脚本随之调整
 
 2020年6月20日：
-1.test1 on folder local
-2.test change on another folder
-3.test3 change on dev-local branch
-4.test4 21.06.26 test test test test test test test test 
+1. test1 on folder local
+
+2. test change on another folder
+
+3. test3 change on dev-local branch
+
+3.1. test3.1 change on dev-another branch
+
+4. test4 change on dev-local branch
+
+5. test5 change on dev-another branch second
+
+6. test4 21.06.26 test test test test test test test test 
+      
