@@ -1,0 +1,13 @@
+name: HelloGithub
+
+on:
+  schedule:
+    - cron: '10 * * * *'
+
+jobs:
+ my_job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: scrpit1
+      run: echo Hello Github!
+ 
